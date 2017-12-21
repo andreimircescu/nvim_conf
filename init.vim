@@ -19,7 +19,7 @@ let g:deoplete#enable_at_startup = 1
 set completeopt=longest,menuone
 let g:deoplete#sources#go#gocode_binary = '~/projects/go/bin/gocode'
 
-" supertab 
+" supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
@@ -73,7 +73,7 @@ set backspace=2 " backspace hack
 "ctrlp
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 400
-set wildignore+=*/builds/*,*/build/*,*.so,*.swp,*.zip     
+set wildignore+=*/builds/*,*/build/*,*.so,*.swp,*.zip
 
 " lexima
 let g:lexima_enable_basic_rules = 1
@@ -90,3 +90,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" autogroups
+augroup filetype_go
+	autocmd!
+	autocmd Filetype go :autocmd BufWrite * :Autoformat
+augroup END
