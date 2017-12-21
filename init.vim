@@ -11,6 +11,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'hzchirs/vim-material'
 Plug 'vim-syntastic/syntastic'
 Plug 'carlitux/deoplete-ternjs' "{'do': 'npm install -g tern'} need to install as root
+Plug 'dracula/vim'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 " neoplete
 let g:deoplete#enable_at_startup = 1
@@ -34,6 +36,8 @@ set relativenumber "relative
 " colors
 set background = "dark"
 colorscheme vim-material
+" color dracula
+" let g:airline_theme='dracula'
 let g:airline_theme='material'
 set termguicolors
 
